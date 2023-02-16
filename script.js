@@ -55,11 +55,9 @@ function PostList({ posts }) {
 
 function App() {
   const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await axios.get("https://example.com/posts");
+        const response = await axios.get("https://www.medium.com/posts");
         setPosts(response.data);
       } catch (error) {
         console.error(error);
